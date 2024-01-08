@@ -20,7 +20,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(customizer -> customizer
-                        .requestMatchers(HttpMethod.POST, "/api/v1/user", "/api/v1/product")
+                        .requestMatchers(HttpMethod.POST, "/api/v1/user")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
